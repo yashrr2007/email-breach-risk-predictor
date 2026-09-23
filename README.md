@@ -39,6 +39,16 @@ npm test         # 8 unit tests for the risk engine & breach mapper
 
 Open `http://localhost:3000` in a browser for the dashboard UI.
 
+## Deploy it (free)
+
+**One-click:** fork/clone this repo, then on [dashboard.render.com](https://dashboard.render.com) → **New + → Web Service** → connect the repo. Render reads `render.yaml` and does the rest.
+
+Or click:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/yashrr2007/email-breach-risk-predictor)
+
+The service goes live at `https://breachguard-ai.onrender.com` (name set in `render.yaml`). Free tier notes: sleeps after ~15 min idle (first request takes ~50 s to wake), and analysis history is ephemeral. For local tunneling instead, run `npm start` + `npm run tunnel` (Cloudflare quick tunnel — random URL each run).
+
 ## Configuration (optional)
 
 Copy `.env.example` → `.env` to tune the port, fetch timeout, or cache TTL. Defaults work fine with no config at all.

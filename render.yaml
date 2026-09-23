@@ -1,0 +1,15 @@
+# Render Blueprint — deploys this repo as a free web service.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: breachguard-ai          # -> https://breachguard-ai.onrender.com
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+    # Note: free plan has no persistent disk, so src/data/analyses.json
+    # (analysis history) resets on restart. Breach lookups are unaffected.

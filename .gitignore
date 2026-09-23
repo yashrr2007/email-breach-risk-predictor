@@ -10,7 +10,11 @@ src/data/analyses.json
 
 # Logs
 server.log
+tunnel.log
 *.log
+
+# Local tunnel binary (55 MB, not source)
+tools/
 
 # OS junk
 .DS_Store
